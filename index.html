@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FetchPosts - Own Your LinkedIn Data</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#713cdd",
+                        "primary-dark": "#5b30b0",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#171220",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#231e2e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#120f1a] dark:text-gray-100 overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#ebe8f2] dark:border-[#2d2838] bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">download</span>
+</div>
+<h1 class="font-display text-xl font-bold tracking-tight text-[#120f1a] dark:text-white">FetchPosts</h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#how-it-works">How it works</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#features">Features</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#pricing">Pricing</a>
+</nav>
+<a class="rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary-dark shadow-md hover:shadow-lg flex items-center gap-2" href="#pricing">
+<span>Buy Now</span>
+<span class="opacity-80 font-normal hidden sm:inline">- $24</span>
+</a>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-100 via-transparent to-transparent dark:from-purple-900/20"></div>
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+<div class="max-w-2xl">
+<div class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-sm font-medium text-primary dark:border-purple-800 dark:bg-purple-900/30 dark:text-purple-300 mb-6">
+<span class="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+                        Native macOS App
+                    </div>
+<h1 class="font-display text-5xl font-bold tracking-tight text-[#120f1a] dark:text-white sm:text-6xl mb-6 leading-[1.1]">
+                        Own Your LinkedIn Data <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Forever</span>
+</h1>
+<p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
+                        Stop losing valuable analytics to the 30-day limit. FetchPosts lets you download your entire post history and analytics securely to your Mac.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-primary-dark transition-all hover:scale-105" href="#pricing">
+<span class="material-symbols-outlined mr-2">download</span>
+                            Download for macOS
+                        </a>
+<a class="flex items-center justify-center rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark px-8 py-4 text-base font-medium text-[#120f1a] dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all" href="#features">
+                            Learn more
+                        </a>
+</div>
+<p class="mt-4 text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                        One-time payment. No subscription.
+                    </p>
+</div>
+<div class="relative lg:ml-auto">
+<!-- Decorative blob -->
+<div class="absolute -inset-4 bg-gradient-to-r from-primary to-teal-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+<!-- App Mockup -->
+<div class="relative rounded-xl bg-[#2e2e2e] p-2 shadow-2xl ring-1 ring-gray-900/10 dark:ring-white/10 rotate-1 hover:rotate-0 transition-transform duration-500">
+<div class="flex items-center gap-2 px-4 py-3 border-b border-gray-700 bg-[#3a3a3a] rounded-t-lg">
+<div class="flex gap-1.5">
+<div class="h-3 w-3 rounded-full bg-[#ff5f57]"></div>
+<div class="h-3 w-3 rounded-full bg-[#febc2e]"></div>
+<div class="h-3 w-3 rounded-full bg-[#28c840]"></div>
+</div>
+</div>
+<div class="aspect-[4/3] w-full overflow-hidden rounded-b-lg bg-surface-dark bg-cover bg-center" data-alt="Dashboard interface showing charts and data analytics with dark mode theme" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_hwfnbLR2g4gMTn-sVsYqRqikc743ibWRfTgRgmh8iueIpp6JJsw7OdoRzttUDU-usSdMJIjBytPT6bhq3TXW1DmIR1KbfyauSbxKJEyRJVirhGdoMloYyasXOKIVgEUtkA70ZQZ2_yUIxNHvlVO4_JEJHk18p7mbYHyWM0PYMSSc4JfOYl8mfLvC05qeTzWkePu9FGJWYw6nTz-1m8BKHvPq9W1-kr15_rSfgMHevYBV9SLl-wV97D4cMn2yyzGIvaQsQTki-g');">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 to-transparent flex items-end p-8">
+<div class="w-full">
+<div class="flex justify-between items-end mb-4">
+<div>
+<div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Total Views</div>
+<div class="text-3xl font-bold text-white">1,245,892</div>
+</div>
+<div class="text-green-400 text-sm font-medium flex items-center">
+<span class="material-symbols-outlined text-sm mr-1">trending_up</span> +12.5%
+                                        </div>
+</div>
+<div class="h-24 flex items-end gap-2">
+<div class="w-full bg-primary/30 h-[40%] rounded-sm"></div>
+<div class="w-full bg-primary/50 h-[70%] rounded-sm"></div>
+<div class="w-full bg-primary h-[55%] rounded-sm"></div>
+<div class="w-full bg-primary/60 h-[85%] rounded-sm"></div>
+<div class="w-full bg-primary/40 h-[60%] rounded-sm"></div>
+<div class="w-full bg-primary h-[90%] rounded-sm"></div>
+<div class="w-full bg-white h-[100%] rounded-sm shadow-[0_0_15px_rgba(255,255,255,0.3)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Problem Section -->
+<section class="py-20 bg-white dark:bg-surface-dark">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="mx-auto max-w-3xl text-center mb-16">
+<h2 class="font-display text-3xl font-bold tracking-tight text-[#120f1a] dark:text-white sm:text-4xl">The Problem: LinkedIn Deletes Your Data</h2>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+                    After 30 days, your detailed post analytics disappear into the void. You lose critical insights on what worked, why it worked, and how to replicate it.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="relative group rounded-2xl bg-background-light dark:bg-background-dark p-8 transition-all hover:-translate-y-1 hover:shadow-xl border border-transparent hover:border-primary/20">
+<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400">
+<span class="material-symbols-outlined">timer_off</span>
+</div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">30-Day Limit</h3>
+<p class="text-gray-600 dark:text-gray-400">LinkedIn wipes granular stats after a month. That viral post from January? The data is gone forever.</p>
+</div>
+<div class="relative group rounded-2xl bg-background-light dark:bg-background-dark p-8 transition-all hover:-translate-y-1 hover:shadow-xl border border-transparent hover:border-primary/20">
+<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400">
+<span class="material-symbols-outlined">cloud_off</span>
+</div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">No Export</h3>
+<p class="text-gray-600 dark:text-gray-400">There is no native way to backup your hard work. Screenshots are not data you can analyze.</p>
+</div>
+<div class="relative group rounded-2xl bg-background-light dark:bg-background-dark p-8 transition-all hover:-translate-y-1 hover:shadow-xl border border-transparent hover:border-primary/20">
+<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+<span class="material-symbols-outlined">query_stats</span>
+</div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">Lost Insights</h3>
+<p class="text-gray-600 dark:text-gray-400">Without historical data, you're guessing what content performs best instead of knowing.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works (Timeline) -->
+<section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden" id="how-it-works">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="font-display text-3xl font-bold tracking-tight text-[#120f1a] dark:text-white sm:text-4xl mb-6">Your Data, Safely Recovered in 3 Steps</h2>
+<p class="text-lg text-gray-600 dark:text-gray-300 mb-10">
+                        FetchPosts runs locally on your machine. We never see your password or your data. It's the safest way to archive your digital legacy.
+                    </p>
+<div class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-800 space-y-12">
+<div class="relative">
+<span class="absolute -left-[41px] flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white ring-4 ring-background-light dark:ring-background-dark">1</span>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white">Connect Safely</h3>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Log in via the secure local browser. Your credentials never leave your device.</p>
+</div>
+<div class="relative">
+<span class="absolute -left-[41px] flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white ring-4 ring-background-light dark:ring-background-dark">2</span>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white">Fetch History</h3>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Click one button to scrape your own profile. FetchPosts retrieves posts, views, likes, and comments.</p>
+</div>
+<div class="relative">
+<span class="absolute -left-[41px] flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white ring-4 ring-background-light dark:ring-background-dark">3</span>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white">Export &amp; Analyze</h3>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Download as CSV or JSON for Excel/Notion, or view beautiful charts directly in the app.</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700">
+<div class="aspect-square bg-white dark:bg-surface-dark bg-cover bg-center" data-alt="Abstract visualization of data flowing securely into a central hub" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAH5x1IYYErqIO1zM4fz67-xSXcVq6ewWPcbSeQn4Qk6pEqoc5gxiCXVQ2T9NxCqqDXWmuQDmhLaZSXSSRtszu-drSAL8ZgTSnixynN3hnQsoguEWgXTNv1chVP6Oi5pGDMN2uod4o_NaoUVtxEYrllsUrmW_kKq4-rQjm-3tlE4SzEeQoU1Ia38ifrh3yqlxHMapKuAbCD3sfVdFC2NiZqbAIaEPAYCFbmQYKaL_ydIM312bnV03CfnjXRrF4DAe0UjnZOdrlS8w');">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl text-center">
+<span class="material-symbols-outlined text-6xl text-white mb-2">lock</span>
+<p class="text-white font-bold text-lg">Local Processing Only</p>
+<p class="text-white/80 text-sm">No cloud storage. 100% Private.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-20 bg-white dark:bg-surface-dark" id="features">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="mx-auto max-w-2xl text-center mb-16">
+<h2 class="font-display text-3xl font-bold tracking-tight text-[#120f1a] dark:text-white sm:text-4xl">Why Creators Choose FetchPosts</h2>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Four powerful reasons to take control of your content library today.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Feature 1 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-background-dark p-8">
+<div class="h-12 w-12 rounded-lg bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">Recover Analytics</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">See lifetime views and engagement metrics beyond the 30-day window. Understand the long-tail value of your content.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-background-dark p-8">
+<div class="h-12 w-12 rounded-lg bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400 flex items-center justify-center">
+<span class="material-symbols-outlined">light_mode</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">Golden Hour Identification</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Know exactly when to post based on your historical performance data. Find your personal best time to post.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-background-dark p-8">
+<div class="h-12 w-12 rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400 flex items-center justify-center">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">Content Library</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Searchable offline archive of every post you've ever written. Never lose a draft or a published masterpiece again.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-background-dark p-8">
+<div class="h-12 w-12 rounded-lg bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400 flex items-center justify-center">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-2">Cost Savings</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">One-time payment. No recurring monthly subscriptions. Stop paying $20/month just to see your own data.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark relative" id="pricing">
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+</div>
+<div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+<div class="mx-auto max-w-lg rounded-3xl bg-white dark:bg-surface-dark shadow-xl ring-1 ring-gray-200 dark:ring-gray-700 p-8 sm:p-10 lg:p-12 text-center transform transition-all hover:scale-[1.01]">
+<div class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary mb-6">
+                    Early Adopter Deal
+                </div>
+<h2 class="text-4xl font-bold tracking-tight text-[#120f1a] dark:text-white">Lifetime Access</h2>
+<div class="mt-6 flex items-center justify-center gap-x-4">
+<span class="text-5xl font-bold tracking-tight text-[#120f1a] dark:text-white">$24</span>
+<span class="text-xl font-medium text-gray-500 line-through decoration-red-500/50 decoration-2">$39</span>
+</div>
+<p class="mt-2 text-sm text-gray-500">One-time payment • macOS only</p>
+<a class="mt-8 flex w-full items-center justify-center rounded-xl bg-primary px-3 py-4 text-base font-bold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" href="#">
+                    Get Instant Access
+                </a>
+<ul class="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300 text-left mx-auto max-w-xs" role="list">
+<li class="flex gap-x-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">check</span>
+                        Unlimited downloads
+                    </li>
+<li class="flex gap-x-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">check</span>
+                        Export to CSV/JSON
+                    </li>
+<li class="flex gap-x-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">check</span>
+                        Local analytics dashboard
+                    </li>
+<li class="flex gap-x-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">check</span>
+                        Lifetime updates included
+                    </li>
+</ul>
+</div>
+<p class="text-center mt-8 text-sm text-gray-500 dark:text-gray-400 max-w-md mx-auto">
+                Join 500+ creators who have already secured their data. <br/>
+<span class="underline decoration-dotted cursor-help" title="Price increases as features are added">Price increasing soon.</span>
+</p>
+</div>
+</section>
+<!-- Qualification Section -->
+<section class="py-20 bg-white dark:bg-surface-dark">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- For You -->
+<div class="bg-green-50 dark:bg-green-900/10 rounded-2xl p-8 border border-green-100 dark:border-green-900/30">
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">thumb_up</span>
+                        This is for you if...
+                    </h3>
+<ul class="space-y-4">
+<li class="flex gap-3 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span>
+                            You post consistently on LinkedIn and want to repurpose content.
+                        </li>
+<li class="flex gap-3 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span>
+                            You value data privacy and prefer local storage.
+                        </li>
+<li class="flex gap-3 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span>
+                            You hate monthly subscriptions for simple utilities.
+                        </li>
+</ul>
+</div>
+<!-- Not For You -->
+<div class="bg-red-50 dark:bg-red-900/10 rounded-2xl p-8 border border-red-100 dark:border-red-900/30">
+<h3 class="text-xl font-bold text-[#120f1a] dark:text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-red-500">thumb_down</span>
+                        Not for you if...
+                    </h3>
+<ul class="space-y-4">
+<li class="flex gap-3 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-red-500 shrink-0">cancel</span>
+                            You are a Windows or Linux user (Mac only for now).
+                        </li>
+<li class="flex gap-3 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-red-500 shrink-0">cancel</span>
+                            You want a cloud-based scheduling tool (we only fetch data).
+                        </li>
+<li class="flex gap-3 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-red-500 shrink-0">cancel</span>
+                            You need team collaboration features.
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-3xl px-6 lg:px-8">
+<h2 class="font-display text-3xl font-bold text-center mb-12 text-[#120f1a] dark:text-white">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="group rounded-xl bg-white dark:bg-surface-dark p-6 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+<span class="text-lg">Is this safe to use with my LinkedIn account?</span>
+<span class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        Yes. FetchPosts uses a local browser session to access your data, just like you would manually. We do not use unofficial APIs that get accounts banned. Your session cookies never leave your computer.
+                    </p>
+</details>
+<details class="group rounded-xl bg-white dark:bg-surface-dark p-6 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+<span class="text-lg">Does it work on Windows?</span>
+<span class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        Currently, FetchPosts is a native macOS application designed for Apple Silicon and Intel Macs. A Windows version is on the roadmap but not available yet.
+                    </p>
+</details>
+<details class="group rounded-xl bg-white dark:bg-surface-dark p-6 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+<span class="text-lg">What happens if LinkedIn changes their layout?</span>
+<span class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        We actively maintain the scraper. If LinkedIn updates their DOM structure, we push an update to FetchPosts (included in your lifetime license) to handle the changes.
+                    </p>
+</details>
+<details class="group rounded-xl bg-white dark:bg-surface-dark p-6 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+<span class="text-lg">Is there a refund policy?</span>
+<span class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        We offer a 14-day money-back guarantee if the software doesn't work on your machine as advertised.
+                    </p>
+</details>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark pt-12 pb-8">
+<div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
+<div class="flex items-center gap-2 mb-6">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-lg">download</span>
+</div>
+<span class="font-display text-lg font-bold text-[#120f1a] dark:text-white">FetchPosts</span>
+</div>
+<p class="text-center text-sm text-gray-500 mb-8 max-w-md">
+                A tool for creators who want ownership of their digital labor. Not affiliated with LinkedIn Corporation.
+            </p>
+<div class="flex gap-6 text-sm text-gray-500 mb-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="text-xs text-gray-400">
+                © 2023 FetchPosts. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
