@@ -572,44 +572,7 @@
             </div>
         </div>
     </footer>
-    <!-- Paddle Script -->
-    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-    <script type="text/javascript">
-        Paddle.Environment.set('sandbox');
-        Paddle.Initialize({
-            token: "test_8104afac2ca27102fe032c659a6", // Public API Key
-            eventCallback: function (data) {
-                if (data.name == "checkout.error") {
-                    console.error("Paddle Checkout Error:", data);
-                }
-                if (data.name == "checkout.completed") {
-                    console.log("Payment successful!");
-                    // Optional: window.location.href = "/success"; 
-                }
-            }
-        });
-
-        function openCheckout() {
-            Paddle.Checkout.open({
-                items: [
-                    {
-                        priceId: "pri_01kegkz4hsa5226fqcmczh7vv8", // Product Price ID
-                        quantity: 1
-                    }
-                ]
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            let button = document.getElementById("buy-button");
-            if (button) {
-                button.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    openCheckout();
-                });
-            }
-        });
-    </script>
+    <!-- Payment Script (Lemon Squeezy) to be added -->
 </body>
 
 </html>
