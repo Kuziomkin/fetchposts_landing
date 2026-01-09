@@ -575,8 +575,8 @@
     <!-- Paddle Script -->
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
     <script type="text/javascript">
+        Paddle.Environment.set('sandbox');
         Paddle.Initialize({
-            environment: 'sandbox',
             token: "test_8104afac2ca27102fe032c659a6", // Public API Key
             eventCallback: function (data) {
                 if (data.name == "checkout.completed") {
