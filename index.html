@@ -363,7 +363,8 @@
                 </div>
                 <p class="mt-2 text-sm text-gray-500">One-time payment • macOS only • Saves you $240+/year vs.
                     subscriptions</p>
-                <a class="mt-8 flex w-full items-center justify-center rounded-xl bg-primary px-3 py-4 text-base font-bold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
+                <a id="buy-button"
+                    class="mt-8 flex w-full items-center justify-center rounded-xl bg-primary px-3 py-4 text-base font-bold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
                     href="#">
                     Get FetchPosts Now - $24
                 </a>
@@ -571,6 +572,40 @@
             </div>
         </div>
     </footer>
+    <!-- Paddle Script -->
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script type="text/javascript">
+        Paddle.Initialize({
+            token: "test_8104afac2ca27102fe032c659a6", // Public API Key
+            eventCallback: function (data) {
+                if (data.name == "checkout.completed") {
+                    console.log("Payment successful!");
+                    // Optional: window.location.href = "/success"; 
+                }
+            }
+        });
+
+        function openCheckout() {
+            Paddle.Checkout.open({
+                items: [
+                    {
+                        priceId: "pri_01kegkz4hsa5226fqcmczh7vv8", // Product Price ID
+                        quantity: 1
+                    }
+                ]
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let button = document.getElementById("buy-button");
+            if (button) {
+                button.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    openCheckout();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
