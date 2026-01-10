@@ -428,13 +428,13 @@
         </div>
     </section>
     <!-- FAQ Section -->
-    <section class="py-20 bg-background-light dark:bg-background-dark">
+    <section class="py-20 bg-background-light dark:bg-background-dark" id="faq">
         <div class="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 class="font-display text-3xl font-bold text-center mb-12 text-black dark:text-white">Frequently
                 Asked Questions</h2>
             <div class="space-y-4">
                 <details
-                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&amp;_summary::-webkit-details-marker]:hidden">
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
                     <summary
                         class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
                         <span class="text-lg">Is this safe to use with my LinkedIn account?</span>
@@ -462,7 +462,7 @@
                     </p>
                 </details>
                 <details
-                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&amp;_summary::-webkit-details-marker]:hidden">
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
                     <summary
                         class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
                         <span class="text-lg">Does it work on Windows?</span>
@@ -475,7 +475,7 @@
                     </p>
                 </details>
                 <details
-                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&amp;_summary::-webkit-details-marker]:hidden">
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
                     <summary
                         class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
                         <span class="text-lg">What happens if LinkedIn changes their layout?</span>
@@ -485,19 +485,6 @@
                     <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
                         We actively maintain the scraper. If LinkedIn updates their DOM structure, we push an update to
                         FetchPosts to handle the changes.
-                    </p>
-                </details>
-                <details
-                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&amp;_summary::-webkit-details-marker]:hidden">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
-                        <span class="text-lg">Is there a refund policy?</span>
-                        <span
-                            class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
-                    </summary>
-                    <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
-                        We offer a 14-day money-back guarantee if the software doesn't work on your machine as
-                        advertised.
                     </p>
                 </details>
                 <details
@@ -525,6 +512,60 @@
                         We cannot guarantee this won't happen. FetchPosts automates browsing your own profile, similar
                         to manually clicking through your posts. Use the tool responsibly, avoid excessive scraping in
                         short periods, and understand you use it at your own risk.
+                    </p>
+                </details>
+                <details
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+                        <span class="text-lg">How can I move my license to another laptop?</span>
+                        <span
+                            class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        1. Click the "Deactivate" button in the app on your old computer.<br>
+                        2. Activate the license key on your new computer.
+                    </p>
+                </details>
+                <details
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+                        <span class="text-lg">If I have questions that are not answered here how can I solve
+                            them?</span>
+                        <span
+                            class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        Write an email to <a href="mailto:support@fetchposts.com"
+                            class="text-primary hover:underline">support@fetchposts.com</a>
+                    </p>
+                </details>
+                <details
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+                        <span class="text-lg">If I have suggestion about feature how can I provide them?</span>
+                        <span
+                            class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        Write an email to <a href="mailto:support@fetchposts.com"
+                            class="text-primary hover:underline">support@fetchposts.com</a>
+                    </p>
+                </details>
+                <details
+                    class="group rounded-lg bg-white dark:bg-surface-dark p-6 ring-1 ring-border-light dark:ring-border-dark [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900 dark:text-white font-medium">
+                        <span class="text-lg">Can I request a refund?</span>
+                        <span
+                            class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
+                        Certainly. When you purchase a FetchPosts license, you have 14 days to request a refund. To do
+                        so, simply send us an email at <a href="mailto:support@fetchposts.com"
+                            class="text-primary hover:underline">support@fetchposts.com</a>
                     </p>
                 </details>
             </div>
