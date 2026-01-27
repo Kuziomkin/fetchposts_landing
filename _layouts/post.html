@@ -6,7 +6,7 @@ layout: default
         <div class="mb-10 text-center">
             {% if page.image %}
             <img src="{{ page.image | relative_url }}" alt="{{ page.title }}"
-                class="w-full h-auto max-h-[500px] object-cover rounded-xl shadow-lg mb-8" />
+                class="w-full h-auto max-h-[500px] object-cover object-top rounded-xl shadow-lg mb-8" />
             {% endif %}
             <p class="text-sm text-gray-500 mb-2">{{ page.date | date: "%B %d, %Y" }}</p>
             <h1 class="font-display text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl mb-6">{{
