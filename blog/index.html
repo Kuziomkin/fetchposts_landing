@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog
+description: Latest news and tips from FetchPosts.
+---
+
+<section class="py-20 bg-background-light dark:bg-background-dark min-h-screen">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center mb-16">
+            <h2 class="font-display text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">FetchPosts
+                Blog</h2>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Tips, updates, and guides on managing your LinkedIn
+                data.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for post in site.posts %}
+            <a href="{{ post.url | relative_url }}"
+                class="group flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+                <div class="p-8 flex flex-col h-full">
+                    <div class="mb-4 text-sm text-primary font-medium">
+                        {{ post.date | date: "%B %d, %Y" }}
+                    </div>
+                    <h3
+                        class="text-xl font-bold text-black dark:text-white mb-3 group-hover:text-primary transition-colors">
+                        {{ post.title }}
+                    </h3>
+                    {% if post.description %}
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow line-clamp-3">
+                        {{ post.description }}
+                    </p>
+                    {% else %}
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow line-clamp-3">
+                        {{ post.excerpt | strip_html | truncatewords: 20 }}
+                    </p>
+                    {% endif %}
+                    <div class="text-primary font-bold text-sm flex items-center">
+                        Read Article <span
+                            class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

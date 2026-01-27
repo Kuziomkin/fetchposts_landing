@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="light" lang="{{ site.lang | default: " en" }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    {% seo %}
+    <link rel="icon" type="image/png" href="{{ " /assets/FetchPosts_logo_v2.1.png" | relative_url }}" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0A66C2", // LinkedIn Blue
+                        "primary-dark": "#004182", // Darker Blue
+                        "background-light": "#F3F2EF", // LinkedIn Light BG
+                        "background-dark": "#000000", // LinkedIn Dark BG
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1D2226", // LinkedIn Dark Surface
+                        "border-light": "#E0E0E0", // LinkedIn Border
+                        "border-dark": "#333333", // LinkedIn Dark Border
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-black dark:text-white overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-border-light dark:border-border-dark bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+            <div class="flex items-center gap-3">
+                <a href="{{ " /" | relative_url }}" class="flex items-center gap-3">
+                    <img src="{{ " /assets/FetchPosts_logo_v2.1.png" | relative_url }}" alt="FetchPosts"
+                        class="h-14 w-auto rounded-lg" />
+                    <h1 class="font-display text-xl font-bold tracking-tight text-black dark:text-white">FetchPosts</h1>
+                </a>
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="{{ " /#how-it-works" |
+                    relative_url }}">How it works</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="{{ " /#features" |
+                    relative_url }}">Features</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="{{ " /#pricing" | relative_url
+                    }}">Pricing</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="{{ " /blog/" | relative_url
+                    }}">Blog</a>
+            </nav>
+            <a class="rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary-dark flex items-center gap-2"
+                href="{{ " /#pricing" | relative_url }}">
+                <span class="material-symbols-outlined mr-2">shopping_cart</span>
+                <span>Buy Now</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="border-t border-border-light dark:border-border-dark bg-white dark:bg-surface-dark pt-12 pb-8 mt-auto">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-6">
+                <img src="{{ " /assets/FetchPosts_logo_v2.1.png" | relative_url }}" alt="FetchPosts"
+                    class="h-10 w-10 rounded-lg" />
+                <span class="font-display text-lg font-bold text-black dark:text-white">FetchPosts</span>
+            </div>
+            <p class="text-center text-sm text-gray-500 mb-8 max-w-md">
+                A tool for creators who want ownership of their digital labor. Not affiliated with LinkedIn Corporation.
+            </p>
+            <div class="flex gap-6 text-sm text-gray-500 mb-8">
+                <a class="hover:text-primary transition-colors" href="{{ " /privacy-policy.html" | relative_url
+                    }}">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="{{ " /terms-of-service.html" | relative_url
+                    }}">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="mailto:support@fetchposts.com">Support</a>
+            </div>
+            <div class="text-xs text-gray-400">
+                © 2026 FetchPosts. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+</body>
+
+</html>

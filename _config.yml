@@ -1,0 +1,7 @@
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+title: FetchPosts Blog
+description: How to export, analyze, and repurpose your LinkedIn content.
+url: "https://fetchposts.com" # CRITICAL: Must be your custom domain
