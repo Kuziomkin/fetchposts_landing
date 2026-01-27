@@ -22,7 +22,7 @@ LinkedIn documents this, but it’s easy to miss. According to the [official sou
 * **Article performance & demographics:** Available for **up to two years**.
 * **Other post analytics:** Availability is limited and can be shorter.
 
-Once those windows pass, the data simply isn’t accessible anymore in the UI. No warning. No archive. No recovery.
+Once those windows pass, the data simply isn’t accessible anymore. No warning. No archive. No recovery.
 
 If you don't **save LinkedIn posts** externally, that history is gone forever.
 
