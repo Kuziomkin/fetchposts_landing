@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Download and Export LinkedIn Posts (Before They Disappear)"
-description: "Most creators don't realize LinkedIn deletes old data. Learn why you need to save, download, and export your LinkedIn posts before the 2-year limit wipes them out."
+description: "Most creators don't realize LinkedIn deletes old data. Learn why you need to save your LinkedIn posts before the 2-year limit wipes them out."
 date: 2026-01-26
 categories: [analytics, guide]
 image: /assets/images/linkedin_analytic_limits.png
@@ -68,4 +68,4 @@ LinkedIn is great for distribution. It’s not designed to be your long-term ana
 
 If you treat your content seriously, start to **export** and **save** your data today.
 
-[**Download Your Full LinkedIn History with FetchPosts - $24**](https://fetchposts.com/)
+[**Download Your Full LinkedIn History with FetchPosts**](https://fetchposts.com/)
