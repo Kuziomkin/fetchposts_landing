@@ -21,7 +21,7 @@ description: Latest news and tips from FetchPosts.
                 <div class="aspect-video w-full overflow-hidden bg-gray-100 dark:bg-gray-800">
                     <img src="{{ post.image | relative_url }}" alt="{{ post.title }}"
                         class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                        style="image-rendering: high-quality; image-rendering: -webkit-optimize-contrast;">
+                        style="image-rendering: high-quality; image-rendering: -webkit-optimize-contrast; backface-visibility: hidden; transform: translateZ(0);">
                 </div>
                 {% endif %}
                 <div class="p-8 flex flex-col h-full">
