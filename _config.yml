@@ -1,6 +1,9 @@
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
+
+permalink: /blog/:slug
 
 exclude:
   - CLAUDE.md

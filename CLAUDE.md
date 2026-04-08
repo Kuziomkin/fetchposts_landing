@@ -49,6 +49,8 @@ The site runs at `http://localhost:4000` by default.
 
 ## Adding a blog post
 
+Post URLs are `/blog/<slug>` where `<slug>` is the filename without the date prefix and `.md` extension (e.g. `_posts/2026-03-01-my-post.md` → `fetchposts.com/blog/my-post`).
+
 Create `_posts/YYYY-MM-DD-slug.md` with this front matter:
 
 ```yaml
@@ -57,9 +59,15 @@ layout: post
 title: "Post title"
 description: "Short description shown in listing and meta tags"
 date: YYYY-MM-DD
-categories: [analytics, guide]
 image: /assets/images/filename.png
 ---
+```
+
+If a post previously lived at a different URL (e.g. it had categories in the path), add a `redirect_from` field to preserve old links:
+
+```yaml
+redirect_from:
+  - /old/path/to/post.html
 ```
 
 ## Deployment

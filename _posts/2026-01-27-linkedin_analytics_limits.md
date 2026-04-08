@@ -5,6 +5,8 @@ description: "Most creators don't realize LinkedIn deletes old data. Learn why y
 date: 2026-01-26
 categories: [analytics, guide]
 image: /assets/images/linkedin_analytic_limits.png
+redirect_from:
+  - /analytics/guide/2026/01/26/linkedin_analytics_limits.html
 ---
 
 Most people assume LinkedIn keeps their analytics indefinitely.
